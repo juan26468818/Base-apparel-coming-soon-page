@@ -8,28 +8,36 @@
     <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="./main.css">
     <script defer src="./script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
-        <div>
+        <picture class="logo">
             <img src="./img/logo.svg" alt="Base Apparel logo" aria-hidden="true">
-            <h1>WE'RE<br>
-                <b>
-                    COMING<br>
-                    SOON
-                </b>
-            </h1>
-            <p>Hello fellow shoppers! We're currently building our new fashion store. 
-                Add your email below to stay up-to-date with announcements and our launch deals.
-            </p>
-            <form>
-                <input type="email" placeholder="Email Address">
-                <button type="submit"><img src="./img/icon-arrow.svg"></button>
-            </form>
+        </picture>
+        <div class="info-container">
+            <div class="text-container">
+                <h1>WE'RE<br>
+                    <b>
+                        COMING<br>
+                        SOON
+                    </b>
+                </h1>
+                <p>Hello fellow shoppers! We're currently building our new fashion store. 
+                    Add your email below to stay up-to-date with announcements and our launch deals.
+                </p>
+                <form>
+                    <input type="email" placeholder="Email Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                    <button type="submit"><img src="./img/icon-arrow.svg"></button>
+                </form>
+            </div>
         </div>
-        <div>
-            <img src="./img/hero-desktop.jpg">
-        </div>
+        <picture class="img-container">
+            <source media="(max-width: 768)" srcset="./img/hero-mobile.jpg">
+            <img src="./img/hero-desktop.jpg" class="main-img">
+        </picture>
 
     </main>
 </body>
