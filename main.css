@@ -70,11 +70,20 @@ input{
     padding: 1rem 1.5rem;
     outline: none;
 }
-input:invalid{
+.invalid{
+    position: relative;
     outline: 1px solid var(--Soft-Red);
     background-image: url("./img/icon-error.svg");
     background-repeat: no-repeat;
     background-position: bottom 50% right 6rem;
+}
+.error::after{
+    font-size: .8rem;
+    content: 'Please provide a valid email';
+    color: var(--Soft-Red);
+    position: absolute;
+    top: 3.5rem;
+    left: 1rem;
 }
 button{
     position: absolute;
